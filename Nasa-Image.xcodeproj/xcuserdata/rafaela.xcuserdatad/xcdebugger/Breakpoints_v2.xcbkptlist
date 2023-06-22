@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "FB866C5D-D828-4828-BDAB-DD4EC9FAB331"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50CD2556-2D30-4E4F-B0A4-F8B2772EBB53"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nasa-Image/Network/NasaSearchProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "nasaImageSearch(searchFor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7E36DB1-C8EB-4E2C-AE95-682C92C40EB5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nasa-Image/Network/NasaSearchProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "nasaImageSearch(searchFor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29BE30FC-F47A-413C-A4FF-9671FB1A5920"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nasa-Image/Search/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "searchNasaImages()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "29BE30FC-F47A-413C-A4FF-9671FB1A5920 - b47a22103c196c94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "2224">
+               </Location>
+               <Location
+                  uuid = "29BE30FC-F47A-413C-A4FF-9671FB1A5920 - c2bd0396bf343296"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "2524">
+               </Location>
+               <Location
+                  uuid = "29BE30FC-F47A-413C-A4FF-9671FB1A5920 - 51f7e3153ed2f098"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(9) suspend resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "2204">
+               </Location>
+               <Location
+                  uuid = "29BE30FC-F47A-413C-A4FF-9671FB1A5920 - a01563eba3b25ef4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(16) suspend resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "1056">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8BA63DD5-B895-440F-B408-9B1A3B6B053B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nasa-Image/Search/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "searchNasaImages()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8BA63DD5-B895-440F-B408-9B1A3B6B053B - 28decf36e78dc110"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "8BA63DD5-B895-440F-B408-9B1A3B6B053B - b47a22103c196c77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "2504">
+               </Location>
+               <Location
+                  uuid = "8BA63DD5-B895-440F-B408-9B1A3B6B053B - c2bd0396bf343275"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "2804">
+               </Location>
+               <Location
+                  uuid = "8BA63DD5-B895-440F-B408-9B1A3B6B053B - a3ced1432c614814"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(8) await resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "8BA63DD5-B895-440F-B408-9B1A3B6B053B - 51f7e3153ed2f07b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(9) suspend resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "2484">
+               </Location>
+               <Location
+                  uuid = "8BA63DD5-B895-440F-B408-9B1A3B6B053B - 73a18b3d359d821f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(10) await resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "8BA63DD5-B895-440F-B408-9B1A3B6B053B - 9cbbaa009653471d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(12) await resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "8BA63DD5-B895-440F-B408-9B1A3B6B053B - 265dd5d7f2090803"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(14) await resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "8BA63DD5-B895-440F-B408-9B1A3B6B053B - f59d08e00725f910"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(15) suspend resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "8BA63DD5-B895-440F-B408-9B1A3B6B053B - a01563eba3b25e17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(16) suspend resume partial function for closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "1340">
+               </Location>
+               <Location
+                  uuid = "8BA63DD5-B895-440F-B408-9B1A3B6B053B - d531b9c891c801fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 @Swift.MainActor @Sendable () -&gt; () in closure #2 @Sendable () async -&gt; () in Nasa_Image.SearchViewModel.searchNasaImages() async -&gt; ()"
+                  moduleName = "Nasa-Image"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaela/Desktop/Nasa-Image/Nasa-Image/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
