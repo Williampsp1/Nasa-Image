@@ -1,0 +1,39 @@
+{
+  "configurations" : [
+    {
+      "id" : "11E56A41-0FBE-489E-8B10-A64D133EC300",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Nasa-Image.xcodeproj",
+      "identifier" : "53B2D0462A437A78001EC5A4",
+      "name" : "Nasa-Image"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Nasa-Image.xcodeproj",
+        "identifier" : "53B2D0572A437A7A001EC5A4",
+        "name" : "Nasa-ImageTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Nasa-Image.xcodeproj",
+        "identifier" : "53B2D0612A437A7A001EC5A4",
+        "name" : "Nasa-ImageUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

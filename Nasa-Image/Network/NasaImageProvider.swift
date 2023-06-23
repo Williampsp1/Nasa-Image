@@ -1,5 +1,5 @@
 //
-//  NasaSearchProvider.swift
+//  NasaImageProvider.swift
 //  Nasa-Image
 //
 //  Created by Rafaela on 6/21/23.
@@ -8,15 +8,11 @@
 import Foundation
 import UIKit
 
-protocol NasaSearchProviding {
+protocol NasaImageProviding {
     func nasaImageSearch(searchFor search: String) async throws -> [NasaItem]
 }
 
-enum NetworkError: Error {
-    case InvalidURL
-}
-
-struct NasaSearchProvider: NasaSearchProviding {
+struct NasaImageProvider: NasaImageProviding {
     private let url = URL(string: "https://images-api.nasa.gov/search")
     
     func nasaImageSearch(searchFor query: String) async throws -> [NasaItem] {
@@ -24,7 +20,11 @@ struct NasaSearchProvider: NasaSearchProviding {
             throw NetworkError.InvalidURL
         }
         
-        let (data, _) = try await URLSession.shared.data(from: url)
+        let (data, response) = try await URLSession.shared.data(from: url)
+        try Task.checkCancellation()
+        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+            throw NetworkError.HTTPError
+        }
         
         let nasaItems = try JSONDecoder().decode(NasaResult.self, from: data).collection.items
         
