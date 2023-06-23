@@ -39,4 +39,6 @@ struct NasaListItem: Identifiable {
     let id = UUID()
     let title: String
     let image: UIImage
+    let description: String
+    let dateCreated: String
 }

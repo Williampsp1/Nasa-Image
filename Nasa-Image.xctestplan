@@ -9,7 +9,6 @@
     }
   ],
   "defaultOptions" : {
-    "codeCoverage" : false,
     "targetForVariableExpansion" : {
       "containerPath" : "container:Nasa-Image.xcodeproj",
       "identifier" : "53B2D0462A437A78001EC5A4",

@@ -1,5 +1,5 @@
 //
-//  SearchView.swift
+//  SearchImageView.swift
 //  Nasa-Image
 //
 //  Created by Rafaela on 6/21/23.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct SearchView: View {
-    @StateObject private var viewModel = SearchViewModel()
+struct SearchImageView: View {
+    @StateObject private var viewModel = SearchImageViewModel()
     
     var body: some View {
         NavigationView {
@@ -41,9 +41,11 @@ struct SearchView: View {
             .buttonStyle(.borderedProminent)
             List {
                 ForEach(viewModel.nasaListItems) { item in
-                    ImageItemView(item: item)
-                    Divider()
-                        .listRowSeparator(.hidden)
+                    NavigationLink(destination: ImageDetailView(item: item)) {
+                        ImageItemView(title: item.title, image: item.image)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .listRowSeparator(.hidden)
                 }
             }
             .listStyle(.plain)
@@ -54,6 +56,6 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        SearchImageView()
     }
 }
