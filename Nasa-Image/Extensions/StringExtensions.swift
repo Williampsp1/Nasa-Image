@@ -24,13 +24,3 @@ extension String {
         .mergingAttributes(AttributeContainer([.font: UIFont.systemFont(ofSize: 15)]))
     }
 }
-
-extension Text {
-    init(html: String) {
-        do {
-            try self.init(html.htmlToAttributedString())
-        } catch {
-            self.init(error.localizedDescription)
-        }
-    }
-}

@@ -15,7 +15,7 @@ struct NasaTextModifier: ViewModifier {
     }
 }
 
-extension View {
+extension Text {
     func nasaText() -> some View {
         self.modifier(NasaTextModifier())
     }
