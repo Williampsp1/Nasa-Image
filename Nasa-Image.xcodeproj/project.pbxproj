@@ -12,8 +12,6 @@
 		53B2D04F2A437A7A001EC5A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53B2D04E2A437A7A001EC5A4 /* Assets.xcassets */; };
 		53B2D0532A437A7A001EC5A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53B2D0522A437A7A001EC5A4 /* Preview Assets.xcassets */; };
 		53B2D05D2A437A7A001EC5A4 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D05C2A437A7A001EC5A4 /* SearchViewModelTests.swift */; };
-		53B2D0672A437A7A001EC5A4 /* Nasa_ImageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D0662A437A7A001EC5A4 /* Nasa_ImageUITests.swift */; };
-		53B2D0692A437A7A001EC5A4 /* Nasa_ImageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D0682A437A7A001EC5A4 /* Nasa_ImageUITestsLaunchTests.swift */; };
 		53B2D0772A437CC2001EC5A4 /* NasaImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D0762A437CC2001EC5A4 /* NasaImageProvider.swift */; };
 		53B2D07A2A438604001EC5A4 /* NasaResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D0792A438604001EC5A4 /* NasaResult.swift */; };
 		53B2D07E2A438C17001EC5A4 /* SearchImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D07D2A438C17001EC5A4 /* SearchImageViewModel.swift */; };
@@ -43,13 +41,6 @@
 			remoteGlobalIDString = 53B2D0462A437A78001EC5A4;
 			remoteInfo = "Nasa-Image";
 		};
-		53B2D0632A437A7A001EC5A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 53B2D03F2A437A78001EC5A4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 53B2D0462A437A78001EC5A4;
-			remoteInfo = "Nasa-Image";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -61,9 +52,6 @@
 		53B2D0522A437A7A001EC5A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		53B2D0582A437A7A001EC5A4 /* Nasa-ImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nasa-ImageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B2D05C2A437A7A001EC5A4 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
-		53B2D0622A437A7A001EC5A4 /* Nasa-ImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nasa-ImageUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		53B2D0662A437A7A001EC5A4 /* Nasa_ImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nasa_ImageUITests.swift; sourceTree = "<group>"; };
-		53B2D0682A437A7A001EC5A4 /* Nasa_ImageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nasa_ImageUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		53B2D0762A437CC2001EC5A4 /* NasaImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaImageProvider.swift; sourceTree = "<group>"; };
 		53B2D0792A438604001EC5A4 /* NasaResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaResult.swift; sourceTree = "<group>"; };
 		53B2D07D2A438C17001EC5A4 /* SearchImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImageViewModel.swift; sourceTree = "<group>"; };
@@ -94,13 +82,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		53B2D05F2A437A7A001EC5A4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,7 +91,6 @@
 				53B2D08F2A44E9AF001EC5A4 /* Nasa-Image.xctestplan */,
 				53B2D0492A437A78001EC5A4 /* Nasa-Image */,
 				53B2D05B2A437A7A001EC5A4 /* Nasa-ImageTests */,
-				53B2D0652A437A7A001EC5A4 /* Nasa-ImageUITests */,
 				53B2D0482A437A78001EC5A4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,7 +100,6 @@
 			children = (
 				53B2D0472A437A78001EC5A4 /* Nasa-Image.app */,
 				53B2D0582A437A7A001EC5A4 /* Nasa-ImageTests.xctest */,
-				53B2D0622A437A7A001EC5A4 /* Nasa-ImageUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,15 +136,6 @@
 				53B2D0852A44D3CB001EC5A4 /* ViewModelTests */,
 			);
 			path = "Nasa-ImageTests";
-			sourceTree = "<group>";
-		};
-		53B2D0652A437A7A001EC5A4 /* Nasa-ImageUITests */ = {
-			isa = PBXGroup;
-			children = (
-				53B2D0662A437A7A001EC5A4 /* Nasa_ImageUITests.swift */,
-				53B2D0682A437A7A001EC5A4 /* Nasa_ImageUITestsLaunchTests.swift */,
-			);
-			path = "Nasa-ImageUITests";
 			sourceTree = "<group>";
 		};
 		53B2D0752A437C13001EC5A4 /* Network */ = {
@@ -268,24 +238,6 @@
 			productReference = 53B2D0582A437A7A001EC5A4 /* Nasa-ImageTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		53B2D0612A437A7A001EC5A4 /* Nasa-ImageUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 53B2D0722A437A7A001EC5A4 /* Build configuration list for PBXNativeTarget "Nasa-ImageUITests" */;
-			buildPhases = (
-				53B2D05E2A437A7A001EC5A4 /* Sources */,
-				53B2D05F2A437A7A001EC5A4 /* Frameworks */,
-				53B2D0602A437A7A001EC5A4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				53B2D0642A437A7A001EC5A4 /* PBXTargetDependency */,
-			);
-			name = "Nasa-ImageUITests";
-			productName = "Nasa-ImageUITests";
-			productReference = 53B2D0622A437A7A001EC5A4 /* Nasa-ImageUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -300,10 +252,6 @@
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					53B2D0572A437A7A001EC5A4 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 53B2D0462A437A78001EC5A4;
-					};
-					53B2D0612A437A7A001EC5A4 = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 53B2D0462A437A78001EC5A4;
 					};
@@ -324,7 +272,6 @@
 			targets = (
 				53B2D0462A437A78001EC5A4 /* Nasa-Image */,
 				53B2D0572A437A7A001EC5A4 /* Nasa-ImageTests */,
-				53B2D0612A437A7A001EC5A4 /* Nasa-ImageUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -340,13 +287,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		53B2D0562A437A7A001EC5A4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53B2D0602A437A7A001EC5A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -392,15 +332,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		53B2D05E2A437A7A001EC5A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				53B2D0672A437A7A001EC5A4 /* Nasa_ImageUITests.swift in Sources */,
-				53B2D0692A437A7A001EC5A4 /* Nasa_ImageUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -408,11 +339,6 @@
 			isa = PBXTargetDependency;
 			target = 53B2D0462A437A78001EC5A4 /* Nasa-Image */;
 			targetProxy = 53B2D0592A437A7A001EC5A4 /* PBXContainerItemProxy */;
-		};
-		53B2D0642A437A7A001EC5A4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 53B2D0462A437A78001EC5A4 /* Nasa-Image */;
-			targetProxy = 53B2D0632A437A7A001EC5A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -652,50 +578,6 @@
 			};
 			name = Release;
 		};
-		53B2D0732A437A7A001EC5A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W7VQ2PD274;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Lopez.Nasa-ImageUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Nasa-Image";
-			};
-			name = Debug;
-		};
-		53B2D0742A437A7A001EC5A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W7VQ2PD274;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Lopez.Nasa-ImageUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Nasa-Image";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -722,15 +604,6 @@
 			buildConfigurations = (
 				53B2D0702A437A7A001EC5A4 /* Debug */,
 				53B2D0712A437A7A001EC5A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		53B2D0722A437A7A001EC5A4 /* Build configuration list for PBXNativeTarget "Nasa-ImageUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				53B2D0732A437A7A001EC5A4 /* Debug */,
-				53B2D0742A437A7A001EC5A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
