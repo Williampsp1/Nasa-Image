@@ -2,7 +2,7 @@
 //  NasaResult.swift
 //  Nasa-Image
 //
-//  Created by Rafaela on 6/21/23.
+//  Created by William on 6/21/23.
 //
 
 import Foundation
@@ -39,6 +39,6 @@ struct NasaListItem: Identifiable {
     let id = UUID()
     let title: String
     let image: UIImage
-    let description: String
+    let description: AttributedString
     let dateCreated: String
 }

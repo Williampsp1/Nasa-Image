@@ -2,7 +2,7 @@
 //  SearchImageViewModel.swift
 //  Nasa-Image
 //
-//  Created by Rafaela on 6/21/23.
+//  Created by William on 6/21/23.
 //
 
 import Foundation
@@ -39,6 +39,7 @@ class SearchImageViewModel: ObservableObject {
         await MainActor.run {
             loadingState = .loading
         }
+        
         task = Task {
             do {
                 let nasaItems = try await nasaImageProvider.nasaImageSearch(searchFor: searchQuery)
@@ -47,9 +48,9 @@ class SearchImageViewModel: ObservableObject {
                     nasaListItems = []
                     loadingState = .loaded
                 }
+                
                 for item in nasaItems {
                     try Task.checkCancellation()
-                    print("\(item)")
                     if let listItem = buildNasaListItem(item: item) {
                         await MainActor.run {
                             nasaListItems.append(listItem)
@@ -86,15 +87,28 @@ class SearchImageViewModel: ObservableObject {
     }
     
     private func buildNasaListItem(item: NasaItem) -> NasaListItem? {
-        var image = UIImage()
         var listItem: NasaListItem?
+        var finalDate = ""
+        var description: AttributedString = ""
         
         guard let nasaData = item.data.first, let imageLink = item.links.first?.imageLink, let url = URL(string: imageLink.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""), let imageData = try? Data(contentsOf: url) else {
             return nil
         }
         
-        image = UIImage(data: imageData) ?? UIImage()
-        listItem = NasaListItem(title: nasaData.title, image: image, description: nasaData.description ?? "" , dateCreated: nasaData.date_created)
+        let dateFormatter = ISO8601DateFormatter()
+        if let date = dateFormatter.date(from: nasaData.date_created) {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            finalDate = formatter.string(from: date)
+        }
+        do {
+            description = try nasaData.description?.htmlToAttributedString() ?? ""
+        } catch {
+            description = ""
+        }
+        
+        let image = UIImage(data: imageData) ?? UIImage()
+        listItem = NasaListItem(title: nasaData.title, image: image, description: description, dateCreated: finalDate)
         
         return listItem
     }

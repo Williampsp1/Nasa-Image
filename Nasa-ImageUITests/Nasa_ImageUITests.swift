@@ -2,7 +2,7 @@
 //  Nasa_ImageUITests.swift
 //  Nasa-ImageUITests
 //
-//  Created by Rafaela on 6/21/23.
+//  Created by William on 6/21/23.
 //
 
 import XCTest

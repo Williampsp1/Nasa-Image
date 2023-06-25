@@ -2,7 +2,7 @@
 //  MockImageProviders.swift
 //  Nasa-Image
 //
-//  Created by Rafaela on 6/22/23.
+//  Created by William on 6/22/23.
 //
 
 import Foundation

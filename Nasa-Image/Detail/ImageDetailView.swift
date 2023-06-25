@@ -2,7 +2,7 @@
 //  ImageDetailView.swift
 //  Nasa-Image
 //
-//  Created by Rafaela on 6/23/23.
+//  Created by William on 6/23/23.
 //
 
 import SwiftUI
@@ -21,7 +21,7 @@ struct ImageDetailView: View {
                     .nasaImage()
                     .padding(15)
                 
-                Text("Date created: \(item.dateCreated)")
+                Text("Date: \(item.dateCreated)")
                     .font(.caption)
                     .fontDesign(.monospaced)
             }
@@ -33,7 +33,6 @@ struct ImageDetailView: View {
                     .underline()
                 
                 Text(item.description)
-                    .font(.footnote)
                     .padding(8)
                     .background(.gray.opacity(0.2))
                     .cornerRadius(12)

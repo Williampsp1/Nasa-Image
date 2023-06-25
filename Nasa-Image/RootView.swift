@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Nasa-Image
 //
-//  Created by Rafaela on 6/21/23.
+//  Created by William on 6/21/23.
 //
 
 import SwiftUI

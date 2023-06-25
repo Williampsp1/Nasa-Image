@@ -31,6 +31,7 @@
 		53B2D0982A46424B001EC5A4 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D0972A46424B001EC5A4 /* ImageDetailView.swift */; };
 		53B2D09A2A464BD6001EC5A4 /* NasaImageModifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D0992A464BD6001EC5A4 /* NasaImageModifer.swift */; };
 		53B2D09B2A46500F001EC5A4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D0932A463C40001EC5A4 /* NetworkError.swift */; };
+		53B2D09E2A469DD6001EC5A4 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D09D2A469DD6001EC5A4 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		53B2D0932A463C40001EC5A4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		53B2D0972A46424B001EC5A4 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 		53B2D0992A464BD6001EC5A4 /* NasaImageModifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaImageModifer.swift; sourceTree = "<group>"; };
+		53B2D09D2A469DD6001EC5A4 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		53B2D0492A437A78001EC5A4 /* Nasa-Image */ = {
 			isa = PBXGroup;
 			children = (
+				53B2D09C2A469DBA001EC5A4 /* Extensions */,
 				53B2D0902A4634B8001EC5A4 /* Modifiers */,
 				53B2D07C2A438B9C001EC5A4 /* Detail */,
 				53B2D07B2A438B25001EC5A4 /* Search */,
@@ -216,6 +219,14 @@
 				53B2D0992A464BD6001EC5A4 /* NasaImageModifer.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		53B2D09C2A469DBA001EC5A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				53B2D09D2A469DD6001EC5A4 /* StringExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +369,7 @@
 				53B2D04B2A437A78001EC5A4 /* Nasa_ImageApp.swift in Sources */,
 				53B2D0892A44D42B001EC5A4 /* MockImageProviders.swift in Sources */,
 				53B2D0822A438F0F001EC5A4 /* SearchImageView.swift in Sources */,
+				53B2D09E2A469DD6001EC5A4 /* StringExtensions.swift in Sources */,
 				53B2D08C2A44D6E6001EC5A4 /* MockResult.swift in Sources */,
 				53B2D0942A463C40001EC5A4 /* NetworkError.swift in Sources */,
 				53B2D0772A437CC2001EC5A4 /* NasaImageProvider.swift in Sources */,
@@ -533,8 +545,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -543,7 +555,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Lopez.Nasa-Image";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -571,8 +585,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -581,7 +595,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Lopez.Nasa-Image";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
