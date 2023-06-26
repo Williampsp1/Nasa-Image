@@ -18,7 +18,7 @@ Features:
 - Clear results
 - Handles errors / No results
   
-Includes test coverage.
+Includes unit tests.
 
 To run this app: 
 - Clone the repo onto your computer.
