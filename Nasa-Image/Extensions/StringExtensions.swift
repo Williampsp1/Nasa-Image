@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import SwiftUI
 
 extension String {
     func htmlToAttributedString() throws -> AttributedString {

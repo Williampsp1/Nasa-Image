@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 protocol NasaImageProviding {
     func nasaImageSearch(searchFor search: String) async throws -> [NasaItem]
