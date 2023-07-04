@@ -19,6 +19,7 @@ enum MockResult {
             return ""
         }
     }
+    
     static let nasaListItem = NasaListItem(title: data.title, image: UIImage(systemName: "star") ?? UIImage(), description: description, dateCreated: "2019-05-12")
     static let emptyNasaItems: [NasaItem] = []
 }

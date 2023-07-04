@@ -35,10 +35,10 @@ struct NasaData: Codable {
     let title: String
 }
 
-struct NasaListItem: Identifiable {
+struct NasaListItem: Identifiable, Equatable {
     let id = UUID()
     let title: String
-    let image: UIImage
+    let image: UIImage?
     let description: AttributedString
     let dateCreated: String
 }

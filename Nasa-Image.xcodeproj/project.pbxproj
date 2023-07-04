@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		537C06B12A50CA4E0033ED43 /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C06B02A50CA4E0033ED43 /* FavoritesService.swift */; };
+		537C06B42A50CF260033ED43 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C06B32A50CF260033ED43 /* FavoritesView.swift */; };
+		537C06B72A50D72F0033ED43 /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C06B62A50D72F0033ED43 /* ListingView.swift */; };
+		537C06BA2A50DD070033ED43 /* FavoriteServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C06B92A50DD070033ED43 /* FavoriteServiceTests.swift */; };
+		537C06BB2A50DD0D0033ED43 /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C06B02A50CA4E0033ED43 /* FavoritesService.swift */; };
 		53B2D04B2A437A78001EC5A4 /* Nasa_ImageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D04A2A437A78001EC5A4 /* Nasa_ImageApp.swift */; };
 		53B2D04D2A437A78001EC5A4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D04C2A437A78001EC5A4 /* RootView.swift */; };
 		53B2D04F2A437A7A001EC5A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53B2D04E2A437A7A001EC5A4 /* Assets.xcassets */; };
@@ -44,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		537C06B02A50CA4E0033ED43 /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
+		537C06B32A50CF260033ED43 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		537C06B62A50D72F0033ED43 /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
+		537C06B92A50DD070033ED43 /* FavoriteServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteServiceTests.swift; sourceTree = "<group>"; };
 		53B2D0472A437A78001EC5A4 /* Nasa-Image.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nasa-Image.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B2D04A2A437A78001EC5A4 /* Nasa_ImageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nasa_ImageApp.swift; sourceTree = "<group>"; };
 		53B2D04C2A437A78001EC5A4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -85,6 +94,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		537C06B22A50CEFC0033ED43 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				537C06B32A50CF260033ED43 /* FavoritesView.swift */,
+				537C06B02A50CA4E0033ED43 /* FavoritesService.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		537C06B52A50D7180033ED43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				53B2D0832A43B2CC001EC5A4 /* ImageItemView.swift */,
+				537C06B62A50D72F0033ED43 /* ListingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		537C06B82A50DCE90033ED43 /* FavoriteServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				537C06B92A50DD070033ED43 /* FavoriteServiceTests.swift */,
+			);
+			path = FavoriteServiceTests;
+			sourceTree = "<group>";
+		};
 		53B2D03E2A437A78001EC5A4 = {
 			isa = PBXGroup;
 			children = (
@@ -107,10 +142,12 @@
 		53B2D0492A437A78001EC5A4 /* Nasa-Image */ = {
 			isa = PBXGroup;
 			children = (
+				537C06B22A50CEFC0033ED43 /* Favorites */,
 				53B2D09C2A469DBA001EC5A4 /* Extensions */,
 				53B2D0902A4634B8001EC5A4 /* Modifiers */,
 				53B2D07C2A438B9C001EC5A4 /* Detail */,
 				53B2D07B2A438B25001EC5A4 /* Search */,
+				537C06B52A50D7180033ED43 /* Views */,
 				53B2D0782A4385E4001EC5A4 /* Model */,
 				53B2D0752A437C13001EC5A4 /* Network */,
 				53B2D04C2A437A78001EC5A4 /* RootView.swift */,
@@ -133,6 +170,7 @@
 		53B2D05B2A437A7A001EC5A4 /* Nasa-ImageTests */ = {
 			isa = PBXGroup;
 			children = (
+				537C06B82A50DCE90033ED43 /* FavoriteServiceTests */,
 				53B2D0852A44D3CB001EC5A4 /* ViewModelTests */,
 			);
 			path = "Nasa-ImageTests";
@@ -162,7 +200,6 @@
 			children = (
 				53B2D07D2A438C17001EC5A4 /* SearchImageViewModel.swift */,
 				53B2D0812A438F0F001EC5A4 /* SearchImageView.swift */,
-				53B2D0832A43B2CC001EC5A4 /* ImageItemView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -300,7 +337,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537C06B12A50CA4E0033ED43 /* FavoritesService.swift in Sources */,
 				53B2D07E2A438C17001EC5A4 /* SearchImageViewModel.swift in Sources */,
+				537C06B72A50D72F0033ED43 /* ListingView.swift in Sources */,
 				53B2D0922A4634CC001EC5A4 /* NasaTextModifier.swift in Sources */,
 				53B2D0842A43B2CC001EC5A4 /* ImageItemView.swift in Sources */,
 				53B2D04D2A437A78001EC5A4 /* RootView.swift in Sources */,
@@ -311,6 +350,7 @@
 				53B2D0892A44D42B001EC5A4 /* MockImageProviders.swift in Sources */,
 				53B2D0822A438F0F001EC5A4 /* SearchImageView.swift in Sources */,
 				53B2D09E2A469DD6001EC5A4 /* StringExtensions.swift in Sources */,
+				537C06B42A50CF260033ED43 /* FavoritesView.swift in Sources */,
 				53B2D08C2A44D6E6001EC5A4 /* MockResult.swift in Sources */,
 				53B2D0942A463C40001EC5A4 /* NetworkError.swift in Sources */,
 				53B2D0772A437CC2001EC5A4 /* NasaImageProvider.swift in Sources */,
@@ -324,7 +364,9 @@
 				53B2D09F2A47D737001EC5A4 /* StringExtensions.swift in Sources */,
 				53B2D08D2A44D7B6001EC5A4 /* MockResult.swift in Sources */,
 				53B2D09B2A46500F001EC5A4 /* NetworkError.swift in Sources */,
+				537C06BA2A50DD070033ED43 /* FavoriteServiceTests.swift in Sources */,
 				53B2D08E2A44D830001EC5A4 /* NasaImageProvider.swift in Sources */,
+				537C06BB2A50DD0D0033ED43 /* FavoritesService.swift in Sources */,
 				53B2D0872A44D413001EC5A4 /* NasaResult.swift in Sources */,
 				53B2D08A2A44D57A001EC5A4 /* MockImageProviders.swift in Sources */,
 				53B2D0862A44D40E001EC5A4 /* SearchImageViewModel.swift in Sources */,

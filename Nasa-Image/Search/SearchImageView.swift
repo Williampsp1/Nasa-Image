@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchImageView: View {
     @StateObject private var viewModel = SearchImageViewModel()
+    @StateObject private var favoritesService = FavoritesService()
     
     var body: some View {
         NavigationView {
@@ -17,18 +18,26 @@ struct SearchImageView: View {
                 case .initial: Text("What do you want to find in the stars?")
                         .nasaText()
                 case .loading: ProgressView()
-                case .noResult(let query): Text("No results found for \(query)")
-                        .nasaText()
                 case .loaded: listingView
                 }
             }
+            .toolbar {
+                ToolbarItem {
+                    NavigationLink(destination: FavoritesView(), label: {
+                        Text("Favorites")
+                            .nasaText()
+                    })
+                }
+            }
             .alert("Error occured, please try again.", isPresented: $viewModel.isError) {}
+            .alert("No results for \(viewModel.searchQuery)", isPresented: $viewModel.noResultAlert) {}
             .navigationBarTitleDisplayMode(.inline)
         }
         .searchable(text: $viewModel.searchQuery, prompt: "Search for NASA Images")
         .onSubmit(of: .search) {
             Task { await viewModel.searchNasaImages() }
         }
+        .environmentObject(favoritesService)
     }
     
     var listingView: some View {
@@ -39,17 +48,7 @@ struct SearchImageView: View {
                 Text("Clear Results")
             }
             .buttonStyle(.borderedProminent)
-            List {
-                ForEach(viewModel.nasaListItems) { item in
-                    NavigationLink(destination: ImageDetailView(item: item)) {
-                        ImageItemView(title: item.title, image: item.image)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .listRowSeparator(.hidden)
-                }
-            }
-            .listStyle(.plain)
-            .scrollContentBackground(.hidden)
+            ListingView(items: viewModel.nasaListItems)
         }
     }
 }
