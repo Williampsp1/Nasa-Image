@@ -15,8 +15,14 @@ struct SearchImageView: View {
         NavigationView {
             Group {
                 switch viewModel.loadingState {
-                case .initial: Text("What do you want to find in the stars?")
-                        .nasaText()
+                case .initial:
+                    VStack {
+                        Text("What do you want to find in the stars?")
+                            .nasaText()
+                        Image("nasa")
+                            .resizable()
+                            .scaledToFit()
+                    }
                 case .loading: ProgressView()
                 case .loaded: listingView
                 }
@@ -29,11 +35,13 @@ struct SearchImageView: View {
                     })
                 }
             }
+            .searchable(text: $viewModel.searchQuery, prompt: "Search for NASA Images")
+            .autocorrectionDisabled()
+            .textInputAutocapitalization(.never)
             .alert("Error occured, please try again.", isPresented: $viewModel.isError) {}
             .alert("No results for \(viewModel.searchQuery)", isPresented: $viewModel.noResultAlert) {}
             .navigationBarTitleDisplayMode(.inline)
         }
-        .searchable(text: $viewModel.searchQuery, prompt: "Search for NASA Images")
         .onSubmit(of: .search) {
             Task { await viewModel.searchNasaImages() }
         }

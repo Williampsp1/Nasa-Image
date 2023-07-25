@@ -10,7 +10,7 @@ import XCTest
 final class SearchImageViewModelTests: XCTestCase {
 
     func testSearch() async throws {
-        let viewModel = SearchImageViewModel(nasaImageProvider: MockNasaImageProvider())
+        let viewModel = SearchImageViewModel(nasaDataProvider: MockNasaDataProvider(), cacheImageDataStore: MockCachedImageDataStore(), imageProvider: MockImageProvider())
         XCTAssertEqual(viewModel.loadingState, .initial)
         viewModel.searchQuery = "moon"
         
@@ -18,12 +18,13 @@ final class SearchImageViewModelTests: XCTestCase {
         
         XCTAssertEqual(viewModel.searchQuery, "moon")
         XCTAssertEqual(viewModel.nasaListItems.first?.title, MockResult.nasaListItem.title)
+        XCTAssertEqual(viewModel.nasaListItems.first?.image, MockResult.nasaListItem.image)
         XCTAssertEqual(viewModel.loadingState, .loaded)
         XCTAssertFalse(viewModel.isError)
     }
     
     func testSearchNoResult() async throws {
-        let viewModel = SearchImageViewModel(nasaImageProvider: MockNasaImageProviderEmpty())
+        let viewModel = SearchImageViewModel(nasaDataProvider: MockNasaDataProviderEmpty(), cacheImageDataStore: MockCachedImageDataStore(), imageProvider: MockImageProvider())
         XCTAssertEqual(viewModel.loadingState, .initial)
         viewModel.searchQuery = "123495830gyfh"
         
@@ -37,7 +38,7 @@ final class SearchImageViewModelTests: XCTestCase {
     }
     
     func testSearchNoResultWithItemsLoaded() async throws {
-        let viewModel = SearchImageViewModel(nasaImageProvider: MockNasaImageProviderEmpty())
+        let viewModel = SearchImageViewModel(nasaDataProvider: MockNasaDataProviderEmpty(), cacheImageDataStore: MockCachedImageDataStore(), imageProvider: MockImageProvider())
         viewModel.nasaListItems = [MockResult.nasaListItem]
         viewModel.loadingState = .loaded
         viewModel.searchQuery = "123495830gyfh"
@@ -52,7 +53,7 @@ final class SearchImageViewModelTests: XCTestCase {
     }
     
     func testClear() async {
-        let viewModel = SearchImageViewModel(nasaImageProvider: MockNasaImageProvider())
+        let viewModel = SearchImageViewModel(nasaDataProvider: MockNasaDataProvider(), cacheImageDataStore: MockCachedImageDataStore(), imageProvider: MockImageProvider())
         XCTAssertEqual(viewModel.loadingState, .initial)
         viewModel.searchQuery = "moon"
         
@@ -69,7 +70,7 @@ final class SearchImageViewModelTests: XCTestCase {
     }
     
     func testSearchCancelTask() async {
-        let viewModel = SearchImageViewModel(nasaImageProvider: MockNasaImageCancelled())
+        let viewModel = SearchImageViewModel(nasaDataProvider: MockNasaDataCancelled(), cacheImageDataStore: MockCachedImageDataStore(), imageProvider: MockImageProvider())
         viewModel.nasaListItems = [MockResult.nasaListItem]
         XCTAssertEqual(viewModel.loadingState, .initial)
         viewModel.searchQuery = "mars"
@@ -82,7 +83,7 @@ final class SearchImageViewModelTests: XCTestCase {
     }
     
     func testSearchInvalidURL() async {
-        let viewModel = SearchImageViewModel(nasaImageProvider: MockNasaImageInvalidURL())
+        let viewModel = SearchImageViewModel(nasaDataProvider: MockNasaDataInvalidURL(), cacheImageDataStore: MockCachedImageDataStore(), imageProvider: MockImageProvider())
         XCTAssertEqual(viewModel.loadingState, .initial)
         viewModel.searchQuery = "moon"
         
@@ -94,7 +95,7 @@ final class SearchImageViewModelTests: XCTestCase {
     }
     
     func testSearchHTTPError() async {
-        let viewModel = SearchImageViewModel(nasaImageProvider: MockNasaImageHTTPError())
+        let viewModel = SearchImageViewModel(nasaDataProvider: MockNasaDataHTTPError(), cacheImageDataStore: MockCachedImageDataStore(), imageProvider: MockImageProvider())
         XCTAssertEqual(viewModel.loadingState, .initial)
         viewModel.searchQuery = "moon"
         
@@ -106,7 +107,7 @@ final class SearchImageViewModelTests: XCTestCase {
     }
     
     func testSearchDecodingError() async {
-        let viewModel = SearchImageViewModel(nasaImageProvider: MockNasaImageDecodingError())
+        let viewModel = SearchImageViewModel(nasaDataProvider: MockNasaDataDecodingError(), cacheImageDataStore: MockCachedImageDataStore(), imageProvider: MockImageProvider())
         XCTAssertEqual(viewModel.loadingState, .initial)
         viewModel.searchQuery = "moon"
         
@@ -118,7 +119,7 @@ final class SearchImageViewModelTests: XCTestCase {
     }
     
     func testSearchErrorWithItemsLoaded() async {
-        let viewModel = SearchImageViewModel(nasaImageProvider: MockNasaImageInvalidURL())
+        let viewModel = SearchImageViewModel(nasaDataProvider: MockNasaDataInvalidURL(), cacheImageDataStore: MockCachedImageDataStore(), imageProvider: MockImageProvider())
         viewModel.nasaListItems = [MockResult.nasaListItem]
         viewModel.loadingState = .loaded
         viewModel.searchQuery = "star"
@@ -129,5 +130,45 @@ final class SearchImageViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.loadingState, .loaded)
         XCTAssertEqual(viewModel.nasaListItems.first?.title, MockResult.nasaListItem.title)
         XCTAssertTrue(viewModel.isError)
+    }
+    
+    func testSearchImageProviderDecodingError() async {
+        let viewModel = SearchImageViewModel(nasaDataProvider: MockNasaDataProvider(), cacheImageDataStore: MockCachedImageDataStore(), imageProvider: MockImageDecodingError())
+        XCTAssertEqual(viewModel.loadingState, .initial)
+        viewModel.searchQuery = "star"
+        
+        await viewModel.searchNasaImages()
+        
+        XCTAssertEqual(viewModel.nasaListItems.first?.image, nil)
+        XCTAssertEqual(viewModel.searchQuery, "star")
+        XCTAssertEqual(viewModel.loadingState, .loaded)
+        XCTAssertEqual(viewModel.nasaListItems.first?.title, MockResult.nasaListItem.title)
+        XCTAssertFalse(viewModel.isError)
+    }
+    
+    func testSearchImageProvider() async {
+        let viewModel = SearchImageViewModel(nasaDataProvider: MockNasaDataProvider(), cacheImageDataStore: MockCachedImageDataStore(), imageProvider: MockImageProvider())
+        XCTAssertEqual(viewModel.loadingState, .initial)
+        viewModel.searchQuery = "star"
+        
+        await viewModel.searchNasaImages()
+        
+        XCTAssertEqual(viewModel.nasaListItems.first?.image, MockResult.nasaListItem.image)
+        XCTAssertEqual(viewModel.searchQuery, "star")
+        XCTAssertEqual(viewModel.loadingState, .loaded)
+        XCTAssertEqual(viewModel.nasaListItems.first?.title, MockResult.nasaListItem.title)
+        XCTAssertFalse(viewModel.isError)
+    }
+    
+    func testSearchImageCache() async throws {
+        let cache = MockCachedImageDataStore()
+        let viewModel = SearchImageViewModel(nasaDataProvider: MockNasaDataProvider(), cacheImageDataStore: cache, imageProvider: MockImageProvider())
+        viewModel.searchQuery = "star"
+        
+        XCTAssertThrowsError(try cache.image(for: MockResult.url))
+        
+        await viewModel.searchNasaImages()
+        
+        XCTAssertEqual(viewModel.nasaListItems.first?.image, try cache.image(for: MockResult.url))
     }
 }

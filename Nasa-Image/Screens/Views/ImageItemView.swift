@@ -23,15 +23,17 @@ struct ImageItemView: View {
                 ProgressView()
                     .padding(100)
             }
+            Spacer()
             Divider()
         }
+        .frame(height: 300)
     }
 }
 
 struct ListItemView_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            ImageItemView(title: MockResult.nasaListItem.title, image: nil)
+            ImageItemView(title: MockResult.nasaListItem.title, image: UIImage(systemName: "star"))
         }
     }
 }

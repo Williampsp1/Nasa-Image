@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ImageDetailView: View {
-    let item: NasaListItem
     @EnvironmentObject private var favoriteService: FavoritesService
+    let item: NasaListItem
     
     var body: some View {
         ScrollView {
@@ -18,17 +18,20 @@ struct ImageDetailView: View {
                     .font(.system(.title, design: .monospaced, weight: .medium))
                     .multilineTextAlignment(.center)
                     .shadow(color: .gray, radius: 3, x: 0, y: 2)
-                
+                Spacer()
                 if let image = item.image {
                     Image(uiImage: image)
                         .nasaImage()
                         .padding(15)
+                    Text("Date: \(item.dateCreated)")
+                        .font(.caption)
+                        .fontDesign(.monospaced)
+                } else {
+                    ProgressView()
                 }
-                
-                Text("Date: \(item.dateCreated)")
-                    .font(.caption)
-                    .fontDesign(.monospaced)
+                Spacer()
             }
+            .frame(height: 400)
             .padding(.bottom, 10)
             
             VStack(spacing: 10) {
@@ -36,10 +39,12 @@ struct ImageDetailView: View {
                     .nasaText()
                     .underline()
                 
-                Text(item.description)
-                    .padding(8)
-                    .background(.gray.opacity(0.9))
-                    .cornerRadius(12)
+                if !item.description.description.isEmpty {
+                    Text(item.description)
+                        .padding(8)
+                        .background(.gray.opacity(0.8))
+                        .cornerRadius(12)
+                }
             }
         }
         .toolbar {
@@ -47,11 +52,18 @@ struct ImageDetailView: View {
                 Button(action: {
                     favoriteService.addFavorite(item: item)
                 }) {
-                    Image(systemName: favoriteService.favorites.contains(item) ? "star.fill" : "star")
-                        .foregroundColor(.yellow)
+                    HStack {
+                        Text(favoriteService.contains(item: item) ? "Unfavorite" : "Favorite")
+                            .nasaText()
+                        Image(systemName: favoriteService.contains(item: item) ? "star.fill" : "star")
+                            .foregroundColor(.yellow)
+                    }
                 }
+                .opacity(item.image == nil && item.description.description.isEmpty ? 0.4 : 1)
+                .disabled(item.image == nil && item.description.description.isEmpty)
             }
         }
+        
     }
 }
 

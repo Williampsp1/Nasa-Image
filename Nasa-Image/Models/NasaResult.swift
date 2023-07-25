@@ -16,12 +16,12 @@ struct NasaCollection: Codable {
     let items: [NasaItem]
 }
 
-struct NasaItem: Codable {
+struct NasaItem: Codable, Hashable {
     let data: [NasaData]
     let links: [ImageLink]
 }
 
-struct ImageLink: Codable {
+struct ImageLink: Codable, Hashable {
     let imageLink: String
     
     enum CodingKeys: String, CodingKey {
@@ -29,16 +29,8 @@ struct ImageLink: Codable {
     }
 }
 
-struct NasaData: Codable {
+struct NasaData: Codable, Hashable {
     let date_created: String
     let description: String?
     let title: String
-}
-
-struct NasaListItem: Identifiable, Equatable {
-    let id = UUID()
-    let title: String
-    let image: UIImage?
-    let description: AttributedString
-    let dateCreated: String
 }

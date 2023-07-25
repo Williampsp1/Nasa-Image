@@ -17,4 +17,8 @@ class FavoritesService: ObservableObject {
             favorites.append(item)
         }
     }
+    
+    func contains(item: NasaListItem) -> Bool {
+        favorites.contains(item)
+    }
 }

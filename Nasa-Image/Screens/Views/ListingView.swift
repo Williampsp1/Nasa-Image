@@ -11,14 +11,12 @@ struct ListingView: View {
     var items: [NasaListItem]
     
     var body: some View {
-        List {
-            ForEach(items) { item in
-                NavigationLink(destination: ImageDetailView(item: item)) {
-                    ImageItemView(title: item.title, image: item.image)
-                }
-                .buttonStyle(PlainButtonStyle())
-                .listRowSeparator(.hidden)
+        List(items) { item in
+            NavigationLink(destination: ImageDetailView(item: item)) {
+                ImageItemView(title: item.title, image: item.image)
             }
+            .buttonStyle(PlainButtonStyle())
+            .listRowSeparator(.hidden)
         }
         .listStyle(.plain)
         .scrollContentBackground(.hidden)
