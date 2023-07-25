@@ -16,6 +16,7 @@ Features:
 - List of NASA images
 - Detail screen
 - Add favorites
+- Caching of images
 - Clear results
 - Handles errors / No results
   
