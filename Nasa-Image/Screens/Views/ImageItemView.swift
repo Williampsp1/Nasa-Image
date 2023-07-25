@@ -15,13 +15,13 @@ struct ImageItemView: View {
         VStack {
             Text(title)
                 .nasaText()
+            Spacer()
             if let image = image {
                 Image(uiImage: image)
                     .nasaImage()
                     .padding(.bottom, 15)
             } else {
                 ProgressView()
-                    .padding(100)
             }
             Spacer()
             Divider()
